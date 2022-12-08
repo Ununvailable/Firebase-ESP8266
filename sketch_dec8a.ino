@@ -79,12 +79,10 @@ void loop() {
   else{
     Serial.println("Command error!");
   }
-
-  delay(1000);
   // Đọc tín hiệu từ DHT11
-  temp = dht.readTemperature(); 
-  hum = dht.readHumidity(); 
-  f = dht.convertCtoF(temp);
+  temp = random(0, 100); 
+  hum = random(0, 100); 
+  f = random(0, 100);
   // In ra serial monitor
   Serial.print("Hum: ");
   Serial.print(hum);
